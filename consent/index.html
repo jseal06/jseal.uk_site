@@ -1,0 +1,453 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/fontawesome.js"
+     integrity="sha384-7ox8Q2yzO/uWircfojVuCQOZl+ZZBg2D2J5nkpLqzH1HY0C1dHlTKIbpRz/LG23c" crossorigin="anonymous"></script>
+
+    <title>Inkognito - Your Tattoo Hero</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="css/style.css" rel="stylesheet">
+  </head>
+
+  <body>
+
+    <nav class="navbar navbar-expand-sm navbar-dark bg-primary mb-3">
+        <div class="container">
+            <div class="navbar-brand logo-font">Inkognito</div>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link active">Tattoo Form</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">Piercing Form</a>
+                        </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="background"></div>
+    <div class="vertical-center">
+        <main role="main" class="container">
+
+            <div class="container">
+
+                <div class="col-md-12">
+                    <span class="anchor" id="formUserEdit"></span>
+
+                    <!-- form user info -->
+                    <div class="card card-outline-secondary">
+                        <div class="card-header">
+                            <h3 class="mb-0">Tattoo Consent Form</h3>
+                        </div>
+                        <div class="card-body">
+                            <form class="form" role="form" id="tattooConsentForm" autocomplete="off" action="send-client-consent.php" method="post">
+                                <div class="form-group row">
+                                    <label class="col-md-12 col-form-label form-control-label">First name</label><br/>
+                                </div>
+                                <div class="form-group row">
+                                    <div class="col-md-9">
+                                        <input class="form-control" name="firstname" type="text" placeholder="Firstname" value="">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-md-12 col-form-label form-control-label">Last name</label><br/>
+                                </div>
+                                <div class="form-group row">
+                                    <div class="col-md-9">
+                                        <input class="form-control"  name="lastname" type="text" placeholder="Lastname" value="">
+                                    </div>
+                                </div>
+
+                                <div class="form-group row">
+                                    <label class="col-md-12 col-form-label form-control-label">Address</label><br/>
+                                </div>
+                                <div class="form-group row">
+                                    <div class="col-md-4">
+                                        <input class="form-control" type="text"  name="address1" placeholder="Address Line 1" value="">
+                                    </div>                                    
+                                    <div class="col-md-4">
+                                        <input class="form-control" type="text"  name="address2" placeholder="Address Line 2">
+                                    </div>
+                                    <div class="col-md-4">
+                                        <input class="form-control" type="text"  name="address3" placeholder="Address Line 3">
+                                    </div>
+                                </div>
+
+                                <div class="form-group row">
+                                    <div class="col-md-4">
+                                        <input class="form-control" type="text"  name="city" placeholder="City" value="">
+                                    </div>
+                                    <div class="col-md-4">
+                                        <input class="form-control" type="text"  name="county" placeholder="County">
+                                    </div>             
+                                    <div class="col-md-4">
+                                        <input class="form-control" type="text"  name="postcode" placeholder="Postcode" value="">
+                                    </div>                                                                
+                                </div>
+
+
+                                <div class="form-group row">
+                                    <label class="col-md-12 col-form-label form-control-label">Email</label><br/>
+                                </div>
+                                <div class="form-group row">
+                                    <div class="col-md-9">
+                                        <input class="form-control" type="email"  name="clientemail" placeholder="email@gmail.com" value="">
+                                    </div>
+                                </div>
+
+
+                                <div class="form-group row">
+                                    <label class="col-md-12 col-form-label form-control-label">Phone</label><br/>
+                                </div>
+                                <div class="form-group row">
+                                    <div class="col-md-9">
+                                        <input class="form-control" type="tel" name="phonenumber" placeholder="07XXX XXX XXX" value="">
+                                    </div>
+                                </div>
+
+                                <div class="form-group row">
+                                    <label class="col-md-12 col-form-label form-control-label">Date of birth</label><br/>
+                                </div>
+                                <div class="form-group row">
+                                    <div class="col-md-9">
+                                        <input class="form-control"  name="dateofbirth" type="text" id="datepicker" placeholder="Choose" value="">
+                                    </div>
+                                </div>
+
+                                <div class="form-group row">
+                                    <label class="col-md-12 col-form-label form-control-label">Gender</label><br/>   
+                                </div>
+                                <div class="form-group row">
+                                    <div class="col-md-9">
+                                        <input type="text" class="form-control" id="gender" name="gender" placeholder="Gender">
+                                    </div>
+                                </div>                                
+
+                                <div class="form-group row">
+                                    <label class="col-md-12 col-form-label form-control-label">Please check all to acknowledge:</label>
+                                </div>
+                                <div class="checkbox">
+                                    <label style="font-size: 2em">
+                                        <input type="checkbox" selected=false name="checkbox1">
+                                        <span class="cr"><i class="cr-icon fa fa-check"></i></span>
+                                        <input name="checkbox1lable" id="checkbox1lable" type="hidden"/>
+                                        <div class="long-label">I am not pregnant or breast feeding.</div>
+                                    </label>
+                                </div>
+                                <div class="checkbox">
+                                    <label style="font-size: 2em">
+                                        <input type="checkbox" selected=false name="checkbox2">
+                                        <span class="cr"><i class="cr-icon fa fa-check"></i></span>
+                                        <input name="checkbox2lable" id="checkbox2lable" type="hidden"/>
+                                        <div class="long-label">I confirm that I have been fully informed of the inherent risks, associated with getting a tattoo. I fully understand that these risks, known and unknown, can lead to injury, including but not limited to infection, scarring, difficulties in detecting melanoma and allergic reactions to tattoo pigment, latex gloves, and/or soap. Having been informed of the potential risks, I still wish to proceed with the tattoo application and I freely accept and expressly assume any and all risks.</div>
+                                    </label>
+                                </div>
+                                <div class="checkbox">
+                                    <label style="font-size: 2em">
+                                        <input type="checkbox" selected=false name="checkbox3">
+                                        <span class="cr"><i class="cr-icon fa fa-check"></i></span>
+                                        <input name="checkbox3lable" id="checkbox3lable" type="hidden"/>
+                                        <div class="long-label">Variations in colour/design may exist between the art I have selected and the actual tattoo. I also understand that over time, the colors and the clarity of my tattoo will fade due to natural dispersion of pigment under the skin.</div>
+                                    </label>
+                                </div>
+                                <div class="checkbox">
+                                    <label style="font-size: 2em">
+                                        <input type="checkbox" selected=false name="checkbox4">
+                                        <span class="cr"><i class="cr-icon fa fa-check"></i></span>
+                                        <input name="checkbox4lable" id="checkbox4lable" type="hidden"/>
+                                        <div class="long-label">I acknowledge that I have been given adequate opportunity to read and understand this document, that any and all of my questions have been answered, that it was not presented to me at the last minute, and I understand that I am signing a legal contract waiving certain rights to recover against the Artist and the shop trading as Inkognito.</div>
+                                    </label>
+                                </div>
+                                <div class="checkbox">
+                                    <label style="font-size: 2em">
+                                        <input type="checkbox" selected=false name="checkbox5">
+                                        <span class="cr"><i class="cr-icon fa fa-check"></i></span>
+                                        <input name="checkbox5lable" id="checkbox5lable" type="hidden"/>
+                                        <div class="long-label">I do not have medical or skin conditions such as but not limited to: acne, scarring (Keloid) eczema, psoriasis, freckles, moles or sunburn in the area to be tattooed that may interfere with said tattoo. If I have any type of infection or rash anywhere on my body, I will advise my tattooer.</div>
+                                    </label>
+                                </div>
+                                <div class="checkbox">
+                                    <label style="font-size: 2em">
+                                        <input type="checkbox" name="checkbox6">
+                                        <span class="cr"><i class="cr-icon fa fa-check"></i></span>
+                                        <input name="checkbox6lable" id="checkbox6lable" type="hidden"/>
+                                        <div class="long-label">I acknowledge it is not reasonably possible for the representatives and employees of  the shop trading as Inkognito to determine whether I might have an allergic reaction to the pigments or processes used in my tattoo, and I agree to accept the risk that such a reaction is possible.</div>
+                                    </label>
+                                </div>                                
+
+                                <div class="checkbox">
+                                    <label style="font-size: 2em">
+                                        <input type="checkbox" name="checkbox7">
+                                        <span class="cr"><i class="cr-icon fa fa-check"></i></span>
+                                        <input name="checkbox7lable" id="checkbox7lable" type="hidden"/>
+                                        <div class="long-label">I acknowledge that infection is always possible as a result of the obtaining of a tattoo, particularly in the event that I do not take proper care of my tattoo. I have received aftercare instructions and I agree to follow them while my tattoo is healing.</div>
+                                    </label>
+                                </div>                                
+
+                                <div class="checkbox">
+                                    <label style="font-size: 2em">
+                                        <input type="checkbox" name="checkbox8">
+                                        <span class="cr"><i class="cr-icon fa fa-check"></i></span>
+                                        <input name="checkbox8lable" id="checkbox8lable" type="hidden"/>
+                                        <div class="long-label">I agree that any touch-up work needed, due to my own negligence and will be done at my own expense. I realize that variations in color and design may exist between any tattoo as selected by me and as ultimately applied to my body. I understand that if my skin color is dark, the colors will not appear as bright as they do on light skin.</div>
+                                    </label>
+                                </div>        
+                                <div class="checkbox">
+                                    <label style="font-size: 2em">
+                                        <input type="checkbox" name="checkbox9">
+                                        <span class="cr"><i class="cr-icon fa fa-check"></i></span>
+                                        <input name="checkbox9lable" id="checkbox9lable" type="hidden"/>
+                                        <div class="long-label">I understand that if I have any skin treatments, laser hair removal, plastic surgery or other skin altering procedures, it may result in adverse changes to my tattoo. I acknowledge that a tattoo is a permanent change to my appearance and that no representations have been made to me as to the ability to later change or remove my tattoo. To my knowledge, I do not have a physical, mental or medical impairment or disability which might affect my well being as a direct or indirect result of my decision to have a tattoo.</div>
+                                    </label>
+                                </div>                                       
+                                <div class="checkbox">
+                                    <label style="font-size: 2em">
+                                        <input type="checkbox" name="checkbox10">
+                                        <span class="cr"><i class="cr-icon fa fa-check"></i></span>
+                                        <input name="checkbox10lable" id="checkbox10lable" type="hidden"/>
+                                        <div class="long-label">I acknowledge I am over the age of eighteen and that I have truthfully represented to my tattooer that the obtaining of a tattoo is by my choice alone. I consent to the application of the tattoo and to any actions or conduct of the representatives and employees of the tattoo shop reasonably necessary to perform the tattoo procedure.</div>
+                                    </label>
+                                </div>                                
+                                <div class="checkbox">
+                                    <label style="font-size: 2em">
+                                        <input type="checkbox" name="checkbox11">
+                                        <span class="cr"><i class="cr-icon fa fa-check"></i></span>
+                                        <input name="checkbox11lable" id="checkbox11lable" type="hidden"/>
+                                        <div class="long-label">I understand that tattoo(s) are created by hand and the appearance of the artwork will differ from the tattooed procedure.</div>
+                                    </label>
+                                </div>                                   
+                                <div class="checkbox">
+                                    <label style="font-size: 2em">
+                                        <input type="checkbox" name="checkbox12">
+                                        <span class="cr"><i class="cr-icon fa fa-check"></i></span>
+                                        <input name="checkbox12lable" id="checkbox12lable" type="hidden"/>
+                                        <div class="long-label">TO WAIVE AND RELEASE to the fullest extent permitted by law each of the Artist and the Studio from all liability whatsoever, for any and all claims or causes of action that I, my estate, heirs, executors or assigns may have for personal injury or otherwise, including any direct and/or consequential damages, which result or arise from my tattoo, whether caused by the negligence or fault of either the Artist or the shop trading as Inkognito, or otherwise</div>
+                                    </label>
+                                </div>                                    
+                                <div class="checkbox">
+                                    <label style="font-size: 2em">
+                                        <input type="checkbox" name="checkbox13">
+                                        <span class="cr"><i class="cr-icon fa fa-check"></i></span>
+                                        <input name="checkbox13lable" id="checkbox13lable" type="hidden"/>
+                                        <div class="long-label">I am not a hemophiliac (bleeder). I do not have diabetes, epilepsy, hepatitis, HIV, AIDS, or any communicable disease. I am not under the influence of alcohol and/or drugs. I do not have any Blood Bourne pathogens or recent illness. If I have any condition that might affect the healing of this tattoo, I will advise my tattooer.</div>
+                                    </label>
+                                </div>                                   
+                                <div class="checkbox">
+                                    <label style="font-size: 2em">
+                                        <input type="checkbox" name="checkbox14">
+                                        <span class="cr"><i class="cr-icon fa fa-check"></i></span>
+                                        <input name="checkbox14lable" id="checkbox14lable" type="hidden"/>
+                                        <div class="long-label">I acknowledge that the artists are not translators and cannot guarantee the spelling or meaning of foreign words or symbols. I confirm that the spelling of any words to be used for the tattoo are correct and to my liking.</div>
+                                    </label>
+                                </div>                                         
+                                <div class="checkbox">
+                                    <label style="font-size: 2em">
+                                        <input type="checkbox" name="checkbox15">
+                                        <span class="cr"><i class="cr-icon fa fa-check"></i></span>
+                                        <input name="checkbox15lable" id="checkbox15lable" type="hidden"/>
+                                        <div class="long-label">I agree to allow any photographs taken by the artist to be used for media advertising such as but not limited to; social media outlets, newspaper, commercials, tv, flyer ads, website, portfolio displays, other marketing materials, etc.  </div>
+                                    </label>
+                                </div>                                       
+                                <div class="checkbox">
+                                    <label style="font-size: 2em">
+                                        <input type="checkbox" name="checkbox16">
+                                        <span class="cr"><i class="cr-icon fa fa-check"></i></span>
+                                        <input name="checkbox16lable" id="checkbox16lable" type="hidden"/>
+                                        <div class="long-label">I agree to be put on  the shop trading as Inkognito's newsletter mailing list. (Note: by giving us your email address you give us permission to contact you. You can opt out at any time by using the opt-out link in the newsletter.)</div>
+                                    </label>
+                                </div>     
+                                <div class="checkbox">
+                                    <label style="font-size: 2em">
+                                        <input type="checkbox" name="checkbox17">
+                                        <span class="cr"><i class="cr-icon fa fa-check"></i></span>
+                                        <input name="checkbox17lable" id="checkbox17lable" type="hidden"/>
+                                        <div class="long-label">For finger tattos and side of foot tattoos I understand that these areas will most likely not hold ink well and usually tend to heal very poorly. The shop trading as Inkognito does not guarantee these tattoos and can not guarantee how they heal. The tattoo may also heal poorly beyond repair, and if repair is possible, there will be a charge for repairing the tattoo.</div>
+                                    </label>
+                                </div>    
+                                <div class="form-group row">
+                                    <label class="col-md-12 col-form-label form-control-label">Allergies (eg. Latex etc.)</label>
+                                </div>
+                                <div class="form-group row">
+                                    <div class="col-md-9">
+                                        <input type="text" class="form-control" id="allergies" name="allergies" placeholder="Allergies">
+                                    </div>
+                                </div>                                                                                                 
+                                <div class="row">
+                                    <input type="hidden" name="base64SignitureSvg" id="base64SignitureSvg"/>
+                                    <div class="col-md-12" id="signature"></div>
+                                </div>
+
+                                <div class="form-group row">
+                                    <!-- <label class="col-md-5 col-form-label form-control-label"></label> -->
+                                    <div class="col-md-12">
+                                        <input type="button" class="btn btn-primary send-button" value="Send" onclick="submitTattooConsentForm()">
+                                    </div>
+                                    <!-- <label class="col-md-5 col-form-label form-control-label"></label> -->
+                                </div>
+
+
+                            </form>
+                        </div>
+                    </div>
+                    <!-- /form user info -->
+
+                </div>
+                <!--/col-->
+            </div>
+
+        </main><!-- /.container -->
+    </div>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script>
+        jQuery(document).ready(function($){
+            $("#datepicker").datepicker({
+                dateFormat : 'dd/mm/yy',
+                changeMonth : true,
+                changeYear : true,
+                yearRange: '-100y:c+nn',
+                maxDate: '-1d'
+            });
+
+        });
+        // $(function() {
+        // });
+   
+    </script>
+    <script type="text/javascript">
+        jQuery.noConflict()
+    </script>    
+    <script src="js/jSignature.min.noconflict.js"></script>
+    <script>
+        (function($){
+
+            $(document).ready(function() {
+                
+                // This is the part where jSignature is initialized.
+                var $sigdiv = $("#signature").jSignature({'UndoButton':true})   
+                var signitureStrokes = 0;                        
+                $("#signature").bind('change', function(e){ 
+                    signitureStrokes ++;
+                    console.log(signitureStrokes);
+                });
+
+                submitTattooConsentForm = function(){
+                    var data = $sigdiv.jSignature('getData', "image");
+                    $('#base64SignitureSvg').val(data);
+                   
+
+                    // console.log(data);
+
+                    var firstname = $("input[name=firstname]").val();
+                    var lastname = $("input[name=lastname]").val();
+                    var address1 = $("input[name=address1]").val();
+                    var city = $("input[name=city]").val();
+                    var postcode = $("input[name=postcode]").val();
+                    var clientemail = $("input[name=clientemail]").val();
+                    var phonenumber = $("input[name=phonenumber]").val();
+                    var dateofbirth = $("input[name=dateofbirth]").val();
+
+                    var checkbox1 = $("input[name=checkbox1]").is(':checked');
+                    var checkbox2 = $("input[name=checkbox2]").is(':checked');
+                    var checkbox3 = $("input[name=checkbox3]").is(':checked');
+                    var checkbox4 = $("input[name=checkbox4]").is(':checked');
+                    var checkbox5 = $("input[name=checkbox5]").is(':checked');
+                    var checkbox6 = $("input[name=checkbox6]").is(':checked');
+                    var checkbox7 = $("input[name=checkbox7]").is(':checked');
+                    var checkbox8 = $("input[name=checkbox8]").is(':checked');
+                    var checkbox9 = $("input[name=checkbox9]").is(':checked');
+                    var checkbox10 = $("input[name=checkbox10]").is(':checked');
+                    var checkbox11 = $("input[name=checkbox11]").is(':checked');
+                    var checkbox12 = $("input[name=checkbox12]").is(':checked');
+                    var checkbox13 = $("input[name=checkbox13]").is(':checked');
+                    var checkbox14 = $("input[name=checkbox14]").is(':checked');
+                    var checkbox15 = $("input[name=checkbox15]").is(':checked');
+                    var checkbox16 = $("input[name=checkbox16]").is(':checked');
+                    var checkbox17 = $("input[name=checkbox17]").is(':checked');
+
+
+
+                    $("#checkbox1lable").val($("#checkbox1lable + div").text());
+                    $("#checkbox2lable").val($("#checkbox2lable + div").text());
+                    $("#checkbox3lable").val($("#checkbox3lable + div").text());
+                    $("#checkbox4lable").val($("#checkbox4lable + div").text());
+                    $("#checkbox5lable").val($("#checkbox5lable + div").text());
+                    $("#checkbox6lable").val($("#checkbox6lable + div").text());
+                    $("#checkbox7lable").val($("#checkbox7lable + div").text());
+                    $("#checkbox8lable").val($("#checkbox8lable + div").text());
+                    $("#checkbox9lable").val($("#checkbox9lable + div").text());
+                    $("#checkbox10lable").val($("#checkbox10lable + div").text());
+                    $("#checkbox11lable").val($("#checkbox11lable + div").text());
+                    $("#checkbox12lable").val($("#checkbox12lable + div").text());
+                    $("#checkbox13lable").val($("#checkbox13lable + div").text());
+                    $("#checkbox14lable").val($("#checkbox14lable + div").text());
+                    $("#checkbox15lable").val($("#checkbox15lable + div").text());
+                    $("#checkbox16lable").val($("#checkbox16lable + div").text());
+                    $("#checkbox17lable").val($("#checkbox17lable + div").text());
+
+
+                    console.log($("#checkbox7lable").val());
+                    var today = new Date();
+                    var dd = today.getDate();
+                    var mm = today.getMonth()+1; //January is 0!
+                    var yyyy = today.getFullYear();
+                    var yyyy18Ago = today.getFullYear() - 18;
+
+                    if(dd<10) {
+                        dd = '0'+dd
+                    } 
+
+                    if(mm<10) {
+                        mm = '0'+mm
+                    } 
+
+                    today = mm + '/' + dd + '/' + yyyy;
+                    date18YearsAgoToday = mm + '/' + dd + '/' + yyyy18Ago;
+                    // console.log(today);
+                    // console.log(date18YearsAgoToday);
+
+                    if(firstname == "" || lastname == "" || address1 == "" || city == "" || postcode == "" || city == "" || clientemail == "" || phonenumber == "" || dateofbirth == "" || gender == ""){
+                        alert("Please ensure all personal details are filled in");
+                        return;
+                    }
+                    if(Date.parse(dateofbirth) > Date.parse(date18YearsAgoToday)){
+                        alert("You must be over 18 to get a tattoo");
+                        return;
+                    }
+
+                    if(checkbox1 == false || checkbox2 == false || checkbox3 == false || checkbox4 == false || checkbox5 == false || checkbox6 == false || checkbox7 == false || checkbox8 == false || checkbox9 == false || checkbox10 == false || checkbox11 == false || checkbox12 == false || checkbox13 == false || checkbox14 == false || checkbox15 == false || checkbox16 == false || checkbox17 == false ){
+                        alert("Please ensure all checkboxes are ticked");
+                        return;
+                    }
+                    if(signitureStrokes < 1){
+                        alert("Please ensure consent form is signed");
+                        return;                        
+                    }
+                    console.log($("#base64SignitureSvg").val());
+                    $('#tattooConsentForm').submit();
+                }
+            })
+
+        })(jQuery)
+    </script>    
+  </body>
+</html>
