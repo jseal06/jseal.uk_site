@@ -1,4 +1,0 @@
-AuthType Basic  
-AuthName "restricted area"  
-AuthUserFile /home1/willyoxa/public_html/untapped.solutions/client-projects/inkognito/consent/.htpasswd  
-require user valid-user
